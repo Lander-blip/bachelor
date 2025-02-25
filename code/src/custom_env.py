@@ -47,13 +47,13 @@ class MiniHackCustomEnv(MiniHackNavigation):
 
         lvl_gen.add_goal_pos((21, 13))
 
-        lvl_gen.add_monster(name="green slime", symbol="P", place=(16,1))
-        lvl_gen.add_monster(name="green slime", symbol="P", place=(19,1))
-        lvl_gen.add_monster(name="green slime", symbol="P", place=(13,1))
+        lvl_gen.add_monster(name="killer bee", symbol="a", place=(16,1))
+        lvl_gen.add_monster(name="wolf", symbol="d", place=(19,1))
+        lvl_gen.add_monster(name="killer bee", symbol="a", place=(13,1))
 
-        lvl_gen.add_monster(name="green slime", symbol="P", place=(16,13))
-        lvl_gen.add_monster(name="green slime", symbol="P", place=(19,13))
-        lvl_gen.add_monster(name="green slime", symbol="P", place=(13,13))
+        lvl_gen.add_monster(name="wolf", symbol="d", place=(16,13))
+        lvl_gen.add_monster(name="killer bee", symbol="a", place=(19,13))
+        lvl_gen.add_monster(name="wolf", symbol="d", place=(13,13))
 
         super().__init__(*args, des_file=lvl_gen.get_des(), **kwargs)
 
@@ -172,7 +172,7 @@ def main():
                 boxes.append(BoundingBox(i % 80, i // 80, color="green", class_id=2))
             elif string[i] == "<": #entrance
                 boxes.append(BoundingBox(i % 80, i // 80, color="green", class_id=3))
-            elif string[i] == "r" or string[i] == "m" or string[i] == "P": #monster
+            elif string[i] == "r" or string[i] == "d" or string[i] == "a": #monster
                 boxes.append(BoundingBox(i % 80, i // 80, color="white", class_id=4))
             elif string[i] == "}": #lava
                 boxes.append(BoundingBox(i % 80, i // 80, color="violet", class_id=5))
