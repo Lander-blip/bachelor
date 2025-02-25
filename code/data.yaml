@@ -1,0 +1,18 @@
+
+path: /home/fridge/minihack/dataset5
+
+train: images/train
+val: images/val
+
+
+nc: 6
+# Classes (80 COCO classes)
+names:
+    0: player
+    1: stone
+    2: exit
+    3: entrance
+    4: monster
+    5: lava
+
+device: 0

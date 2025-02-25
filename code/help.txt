@@ -1,0 +1,19 @@
+
+start container met gui
+
+xhost +local:docker
+
+docker run -it --rm \
+    --env DISPLAY=$DISPLAY \
+    --env XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+    --volume /home/fridge/minihack:/app \
+    --volume /tmp/.X11-unix:/tmp/.X11-unix \
+    minihack bash
+
+
+re-enter container
+
+docker exec -it minihack_gui bash
+
+
+cp window2.py /usr/local/lib/python3.8/site-packages/minihack/tiles/window.py
