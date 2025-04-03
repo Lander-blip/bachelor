@@ -1,8 +1,8 @@
 
-path: /home/fridge/minihack/dataset5
+path: /app
 
-train: images/train
-val: images/val
+train: src/images/train
+val: src/images/val
 
 
 nc: 6
